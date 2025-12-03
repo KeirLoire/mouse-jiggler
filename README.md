@@ -1,15 +1,15 @@
 <div align="center">
-    <img src="https://github.com/KeirLoire/mouse-jiggler/blob/master/.github/sample.png?raw=true" width="300" alt="MouseJiggler"/>
+    <img src="https://github.com/KeirLoire/MouseJiggler/blob/master/.github/sample.png?raw=true" width="300" alt="MouseJiggler"/>
     <br>
     <b style="font-size:25px">
-        mouse-jiggler
+        MouseJiggler
     </b>
     <br>
     <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">
         <img src="https://img.shields.io/badge/8-v8a0dc?label=.NET&style=flat&logo=dotnet" alt=".NET Logo"/>
     </a>
-    <a href="https://github.com/KeirLoire/mouse-jiggler/commits/main">
-        <img src="https://github.com/keirLoire/mouse-jiggler/actions/workflows/ci.yml/badge.svg" alt="GitHub CI/CD"/>
+    <a href="https://github.com/KeirLoire/MouseJiggler/commits/main">
+        <img src="https://github.com/keirLoire/MouseJiggler/actions/workflows/ci.yml/badge.svg" alt="GitHub CI/CD"/>
     </a>
 </div>
 
