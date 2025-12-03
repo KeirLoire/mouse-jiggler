@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace MouseJiggler
 {
-    public partial class Menu : Form
+    public partial class frmMenu : Form
     {
         private bool _isJiggling = false;
         private bool _toggle = false;
@@ -13,7 +13,7 @@ namespace MouseJiggler
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        public Menu()
+        public frmMenu()
         {
             InitializeComponent();
 
@@ -93,6 +93,26 @@ namespace MouseJiggler
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            frmMenu.ActiveForm.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnStart_MouseHover(object sender, EventArgs e)
+        {
+            btnStart.BackColor = Color.FromArgb(42, 42, 42);
+        }
+
+        private void btnMinimize_MouseHover(object sender, EventArgs e)
+        {
+            btnStart.BackColor = Color.FromArgb(42, 42, 42);
+        }
+
+        private void btnExit_MouseHover(object sender, EventArgs e)
+        {
+            btnStart.BackColor = Color.FromArgb(42, 42, 42);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace MouseJiggler
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,6 +38,7 @@
             timerTimeout = new System.Windows.Forms.Timer(components);
             grpIdleTimeout = new GroupBox();
             label1 = new Label();
+            btnMinimize = new Button();
             grpIdleTimeout.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,6 +56,8 @@
             btnStart.Text = "START";
             btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click;
+            btnStart.MouseDown += Drag_MouseDown;
+            btnStart.MouseHover += btnStart_MouseHover;
             // 
             // txtIdleTimeout
             // 
@@ -79,12 +82,12 @@
             // 
             // btnExit
             // 
-            btnExit.BackColor = Color.Transparent;
+            btnExit.BackColor = Color.FromArgb(33, 33, 33);
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.White;
-            btnExit.Location = new Point(222, -2);
+            btnExit.Location = new Point(219, 0);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(30, 24);
             btnExit.TabIndex = 4;
@@ -92,6 +95,8 @@
             btnExit.Text = "X";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
+            btnExit.MouseDown += Drag_MouseDown;
+            btnExit.MouseHover += btnExit_MouseHover;
             // 
             // lblAuthor
             // 
@@ -132,8 +137,28 @@
             label1.Size = new Size(67, 15);
             label1.TabIndex = 10;
             label1.Text = "© KeirLoire";
+            label1.MouseDown += Drag_MouseDown;
             // 
-            // Menu
+            // btnMinimize
+            // 
+            btnMinimize.BackColor = Color.FromArgb(33, 33, 33);
+            btnMinimize.FlatAppearance.BorderSize = 0;
+            btnMinimize.FlatStyle = FlatStyle.Flat;
+            btnMinimize.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMinimize.ForeColor = Color.White;
+            btnMinimize.Location = new Point(188, -1);
+            btnMinimize.Name = "btnMinimize";
+            btnMinimize.Size = new Size(30, 24);
+            btnMinimize.TabIndex = 11;
+            btnMinimize.TabStop = false;
+            btnMinimize.Text = "_";
+            btnMinimize.TextAlign = ContentAlignment.TopCenter;
+            btnMinimize.UseVisualStyleBackColor = false;
+            btnMinimize.Click += btnMinimize_Click;
+            btnMinimize.MouseDown += Drag_MouseDown;
+            btnMinimize.MouseHover += btnMinimize_MouseHover;
+            // 
+            // frmMenu
             // 
             AcceptButton = btnStart;
             AutoScaleMode = AutoScaleMode.None;
@@ -141,6 +166,7 @@
             CancelButton = btnExit;
             ClientSize = new Size(249, 202);
             ControlBox = false;
+            Controls.Add(btnMinimize);
             Controls.Add(label1);
             Controls.Add(grpIdleTimeout);
             Controls.Add(lblAuthor);
@@ -149,7 +175,7 @@
             Controls.Add(btnStart);
             FormBorderStyle = FormBorderStyle.None;
             KeyPreview = true;
-            Name = "Menu";
+            Name = "frmMenu";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Mouse Jiggler";
             MouseDown += Drag_MouseDown;
@@ -170,5 +196,6 @@
         private System.Windows.Forms.Timer timerTimeout;
         private GroupBox grpIdleTimeout;
         private Label label1;
+        private Button btnMinimize;
     }
 }
