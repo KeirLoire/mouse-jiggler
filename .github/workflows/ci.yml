@@ -35,7 +35,7 @@ jobs:
       run: msbuild MouseJiggler.sln /t:Restore /p:Configuration=Release
     
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Binary
         path: |
