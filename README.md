@@ -5,8 +5,8 @@
         mouse-jiggler
     </b>
     <br>
-    <a href="https://dotnet.microsoft.com/en-us/download/dotnet/9.0">
-        <img src="https://img.shields.io/badge/9-v8a0dc?label=.NET&style=flat&logo=dotnet" alt=".NET Logo"/>
+    <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0">
+        <img src="https://img.shields.io/badge/8-v8a0dc?label=.NET&style=flat&logo=dotnet" alt=".NET Logo"/>
     </a>
     <a href="https://github.com/KeirLoire/mouse-jiggler/commits/main">
         <img src="https://github.com/keirLoire/mouse-jiggler/actions/workflows/ci.yml/badge.svg" alt="GitHub CI/CD"/>

@@ -12,18 +12,17 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: windows-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
 
     - name: Install .NET Core
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 8.0.x
 
     - name: Setup MSBuild.exe
       uses: microsoft/setup-msbuild@v2
@@ -39,4 +38,4 @@ jobs:
       with:
         name: Binary
         path: |
-          MouseJiggler/bin/Release/**/publish/*.exe
+          MouseJiggler/bin/Release/net8.0-windows7.0/win-x64/publish/MouseJiggler.exe
