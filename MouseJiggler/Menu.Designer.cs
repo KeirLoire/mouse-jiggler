@@ -56,7 +56,6 @@
             btnStart.Text = "START";
             btnStart.UseVisualStyleBackColor = false;
             btnStart.Click += btnStart_Click;
-            btnStart.MouseDown += Drag_MouseDown;
             btnStart.MouseHover += btnStart_MouseHover;
             // 
             // txtIdleTimeout
@@ -95,7 +94,6 @@
             btnExit.Text = "X";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
-            btnExit.MouseDown += Drag_MouseDown;
             btnExit.MouseHover += btnExit_MouseHover;
             // 
             // lblAuthor
@@ -155,7 +153,6 @@
             btnMinimize.TextAlign = ContentAlignment.TopCenter;
             btnMinimize.UseVisualStyleBackColor = false;
             btnMinimize.Click += btnMinimize_Click;
-            btnMinimize.MouseDown += Drag_MouseDown;
             btnMinimize.MouseHover += btnMinimize_MouseHover;
             // 
             // frmMenu
