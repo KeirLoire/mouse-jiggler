@@ -52,11 +52,24 @@ namespace MouseJiggler
             _isSelfMove = true;
 
             var cursorPosition = Cursor.Position;
+            var bounds = SystemInformation.VirtualScreen;
             var offset = _toggle ? 5 : -5;
+            var newCursorPosition = new Point(cursorPosition.X + offset, cursorPosition.Y + offset);
 
-            _toggle = !_toggle;
+            if (!bounds.Contains(newCursorPosition))
+            {
+                int centerX = bounds.X + bounds.Width / 2;
+                int centerY = bounds.Y + bounds.Height / 2;
 
-            Cursor.Position = new Point(cursorPosition.X + offset, cursorPosition.Y + offset);
+                Cursor.Position = new Point(centerX, centerY);
+            }
+            else
+            {
+                _toggle = !_toggle;
+
+                Cursor.Position = newCursorPosition;
+            }
+                
 
             Task.Delay(50).ContinueWith(_ => _isSelfMove = false);
         }
@@ -73,10 +86,7 @@ namespace MouseJiggler
 
         private void OnUserActivity(object sender, EventArgs e)
         {
-            if (_isSelfMove)
-                return;
-
-            if (!_isJiggling)
+            if (_isSelfMove || !_isJiggling)
                 return;
 
             timerJiggle.Stop();
